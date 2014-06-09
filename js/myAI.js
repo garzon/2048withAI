@@ -13,8 +13,8 @@ function wrapper() {
 	if(typeof window.myPlugin !== 'function') window.myPlugin = function() {};
 
 	window.myPlugin.isAutoMode=false;
-	var desription=document.getElementsByClassName("game-explanation")[0];
-	desription.innerHTML+="<input type='button' onclick='window.myPlugin.isAutoMode=!window.myPlugin.isAutoMode;' value='Auto Play/Pause'></input><br />";
+	var desription=document.getElementsByClassName("above-game")[0];
+	desription.innerHTML+="<input type='button' onclick='window.myPlugin.isAutoMode=!window.myPlugin.isAutoMode;' value='Auto Play/Pause'></input> &nbsp; ";
 	
 	window.requestAnimationFrame(function () {
   		window.manager = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
